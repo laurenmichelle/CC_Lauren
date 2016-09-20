@@ -1,6 +1,9 @@
  
  //Train Tracks by Lauren Blake
 
+//By clicking the mouse you create the steam clouds of the train
+//By clicking the spacebar, you reset your drawing
+
  //Variables
  String a= "Connect the Dots to reveal the image!";
  String b= "Then press the spacebar to do it over again!";
@@ -262,8 +265,11 @@ point(675,660);
 
 
 void keyPressed(){
-stroke(0);
+  stroke(0);
 background(252,248,110);
+  text(a,20,20,400,400);
+ text(b,20,50,500,420);
+ text(c,20,80,500,400);
 fill(0);
 textSize(20);
 text("1",430,540); 
