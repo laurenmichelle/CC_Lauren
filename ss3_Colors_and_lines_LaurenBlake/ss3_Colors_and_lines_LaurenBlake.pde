@@ -9,6 +9,7 @@ noStroke();
 //green triangle on the top
 fill(144,255,171);
 triangle(0,0,350,0,350,350);
+
 //pink square on top
 fill(252,110,250);
 rect(350,0,700,350);
@@ -44,6 +45,7 @@ for(int i=0;i<=700;i=i+10){
   }
 }
 void draw(){
+ 
 }
 
 void mouseClicked(){
