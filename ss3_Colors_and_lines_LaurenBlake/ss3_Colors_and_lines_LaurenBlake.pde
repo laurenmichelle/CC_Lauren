@@ -9,7 +9,7 @@ noStroke();
 //green triangle on the top
 fill(144,255,171);
 triangle(0,0,350,0,350,350);
-
+ 
 //pink square on top
 fill(252,110,250);
 rect(350,0,700,350);
@@ -93,12 +93,15 @@ void keyPressed(){
 //yellow background
 background(242,252,110);
 noStroke();
+
 //green triangle on the top
 fill(144,255,171);
 triangle(0,0,350,0,350,350);
+
 //pink square on top
 fill(252,110,250);
 rect(350,0,700,350);
+
 //blue circle
 fill(24,22,198);
 ellipse(350,350,350,350);
