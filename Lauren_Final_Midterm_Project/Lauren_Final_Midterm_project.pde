@@ -1,3 +1,4 @@
+//Presidential Election Voting Simulator 2016 by Lauren Blake
 PImage Hilary;
 PImage Trump;
 PImage Gary;
@@ -9,15 +10,11 @@ PImage GaryRoll;
 PImage HilaryRoll;
 PImage TrumpRoll;
 PImage dottedLine;
-//this is for a 5 second timer
-int currentTime=0;
-int savedTime=0;
 String state="prevote";
 
 
 void setup(){
   size(700,700);
-  savedTime=millis();
   Hilary=loadImage("Hilary.png");
   Trump=loadImage("Trump.png");
   Gary=loadImage("Gary.png");
@@ -45,9 +42,6 @@ void draw(){
   }
   //VOTE STATE
   if (state=="vote"){
-    currentTime=savedTime;
-    currentTime=millis()-savedTime;
-    println(currentTime);
     //background
     background(0);
  //paper
@@ -121,15 +115,10 @@ void draw(){
  }
  //END OF VOTING STATE
   }
-  if (currentTime==5000){
-    println("no vote");
-    state="no vote";
-    savedTime=currentTime;
-    currentTime=millis()-savedTime;
-  }
   if (state=="no vote"){
       background(200);
-      fill(0);
+      image(Flag,100,0,500,700);
+      fill(random(0255));
       text("Did you seriously just not vote?",width/2,height/2);
       text("That's the whole point of this game.",width/2,height/2+100);
       text("Click again to actually let your voice be heard!",width/2,height/2+200);
@@ -186,7 +175,10 @@ void draw(){
 void mouseClicked(){
   if(state=="prevote"){
     state="vote";
-    
+   
+  }
+  else if(state=="vote"){
+    state="no vote";
   }
   else if(state=="trump"){
    state="prevote";
