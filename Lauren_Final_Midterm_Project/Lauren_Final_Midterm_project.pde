@@ -175,9 +175,7 @@ void draw(){
 void mouseClicked(){
   if(state=="prevote"){
     state="vote";
-   
   }
- 
   else if(state=="trump"){
    state="prevote";
  }
@@ -210,5 +208,8 @@ void mouseClicked(){
   else if(state=="vote" && 500<mouseX && mouseX<550 && 600<mouseY && mouseY<650){
     state="write-in";
   }
+   else if(state=="vote"){
+    state="no vote";
+   }
   
  }
