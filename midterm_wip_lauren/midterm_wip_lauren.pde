@@ -7,26 +7,25 @@ void setup(){
 void draw(){
  textAlign(CENTER);
  textSize(33);
-  
+  //store choices in a variable
   if (state=="pregame"){
     background(0);
      stroke(255);
-    text("Create your own picture game!",width/2,height/3);
-    text("Click to start the game", width/2,height/2);
+    text("What to watch on Netflix Guide!",width/2,height/3);
+    text("Click to start", width/2,height/2);
   }
   else if(state=="setting"){
     stroke(255);
     background(0);
-    text("Choose a setting.",width/2,height/2);
-    for(int i=200;i<=1000;i=i+300){
-     fill(255);
-     rectMode(CENTER);
-      rect(i,700,200,100);
-    }
+    text("Are you watching with younger kids?",width/2,height/2);
+    text("Yes or No",width/2, height-100);
+   
   }
   else if (state=="characters"){
     background(0);
-    text("Choose some characters to fill your picture!",width/2,height/2);
+    text("What genre do you prefer?",width/2,height/2);
+    text("Sci-fi, Comedy, Horror, Documentary, Drama");
+    
   }
  else if(state=="details"){
    background(0);
@@ -39,13 +38,13 @@ void draw(){
 }
 
 void mousePressed(){
-  if(state=="pregame"){
+  if(state=="pregame" ){
     state="setting";
   }
   else if(state=="setting"){
-    state="characters";
+    state="characters"; 
   }
- else if(state=="characters"){
+  else if(state=="characters"){
     state="details";
   }
   else if(state=="details"){
