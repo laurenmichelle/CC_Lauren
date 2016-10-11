@@ -177,9 +177,7 @@ void mouseClicked(){
     state="vote";
    
   }
-  else if(state=="vote"){
-    state="no vote";
-  }
+ 
   else if(state=="trump"){
    state="prevote";
  }
