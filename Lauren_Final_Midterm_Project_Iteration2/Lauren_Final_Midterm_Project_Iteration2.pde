@@ -674,7 +674,8 @@ if (state=="gary future" && mouseX>225 && mouseX<225+250 && mouseY>340 && mouseY
     text("Want to change your vote? Click again!",350,650);
   }
   else if (state=="jill future"){
-    stroke(2);
+   background(0);
+   stroke(2);
 tint(255,255);
 image(hand,250,200,700,500);
 fill(255);
