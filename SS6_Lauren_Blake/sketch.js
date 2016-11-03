@@ -46,11 +46,13 @@ function draw() {
   }
   if(ball_new_x_position>250 && ball_new_x_position<450 && ball_new_y_position<175){
     fill(0)
-    text("GOALLLLLL")
+    textSize(20)
+    text("GOALLLLLL",50,100)
   }
-  else{
+  else if (ball_new_x_position<250 && ball_new_x_position>450 && ball_new_y_position<175) {
     fill(0)
-   text("You missed") 
+    textSize(20)
+   text("You missed",50,100) 
     
   }
 }
