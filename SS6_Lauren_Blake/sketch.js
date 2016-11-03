@@ -12,8 +12,7 @@ soccerBall=loadImage("soccer_ball.png")
 
 function setup() {
   createCanvas(500,500)
-var ball_new_y_position=490
-var ball_new_size=100
+
 
 }
 
@@ -44,12 +43,12 @@ function draw() {
   ball_new_size-=0.47 
   }
   }
-  if(ball_new_x_position>250 && ball_new_x_position<450 && ball_new_y_position<175){
+  if(ball_new_x_position>150 && ball_new_x_position<350 && ball_new_y_position<175){
     fill(0)
     textSize(20)
     text("GOALLLLLL",50,100)
   }
-  else if (ball_new_x_position<250 && ball_new_x_position>450 && ball_new_y_position<175) {
+  else if (ball_new_x_position<150 && ball_new_x_position>350 && ball_new_y_position<175) {
     fill(0)
     textSize(20)
    text("You missed",50,100) 
